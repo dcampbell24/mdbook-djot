@@ -40,38 +40,39 @@ impl Preprocessor for Djot {
         "djot-preprocessor"
     }
 
-    fn run(&self, _ctx: &PreprocessorContext, book: Book) -> Result<Book, Error> {
-        let mut book_copy = book.clone();
-        for item in book.sections {
-            match item {
-                BookItem::Chapter(mut chapter) => {
-                    if OsStr::new("dj")
-                        == chapter
-                            .source_path
-                            .as_ref()
-                            .expect("Didn't find a source path!")
-                            .extension()
-                            .expect("source path doesn't have an extension!")
-                    {
-                        let events = Parser::new(&chapter.content);
-                        let mut content = String::new();
-                        self.renderer.push(events, &mut content)?;
-                        let content_stripped = content.trim().to_string();
-                        chapter.content = content_stripped;
-                        book_copy.sections.push(BookItem::Chapter(chapter));
-                    }
-                }
-                item @ (BookItem::Separator | BookItem::PartTitle(_)) => {
-                    book_copy.sections.push(item);
-                }
-            }
+    fn run(&self, ctx: &PreprocessorContext, mut book: Book) -> Result<Book, Error> {
+        if let Some(_cfg) = ctx.config.get_preprocessor(self.name()) {
+            //
         }
 
-        Ok(book_copy)
+        book.for_each_mut(|item| {
+            match item {
+                BookItem::Chapter(chapter) => {
+                    let path = match chapter.source_path.as_ref() {
+                        Some(path) => path,
+                        None => return,
+                    };
+                    let extension = match path.extension() {
+                        Some(extension) => extension,
+                        None => return,
+                    };
+                    if OsStr::new("dj") == extension {
+                        let events = Parser::new(&chapter.content);
+                        let mut content = String::new();
+                        self.renderer.push(events, &mut content).unwrap();
+                        let content_stripped = content.trim().to_string();
+                        chapter.content = content_stripped;
+                    }
+                }
+                BookItem::Separator | BookItem::PartTitle(_) => return,
+            }
+        });
+
+        Ok(book)
     }
 
-    fn supports_renderer(&self, _renderer: &str) -> bool {
-        true
+    fn supports_renderer(&self, renderer: &str) -> bool {
+        renderer != "markdown"
     }
 }
 

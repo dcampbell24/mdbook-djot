@@ -12,6 +12,7 @@ categories = ["command-line-utilities"]
 
 [dependencies]
 anyhow = "1"
+clap = "4"
 jotdown = "0.6"
 mdbook = "0.4"
 semver = "1"
