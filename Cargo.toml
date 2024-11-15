@@ -2,12 +2,22 @@
 name = "mdbook-djot"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "Djot plugin for mdBook."
+license = "MPL-2.0"
+repository = "https://github.com/dcampbell24/mdbook-djot"
+readme = "README.dj"
+keywords = ["djot", "jotdown", "mdBook"]
+categories = ["command-line-utilities"]
 
 [dependencies]
-anyhow = "1.0.93"
-jotdown = "0.6.0"
-mdbook = "0.4.42"
-semver = "1.0.23"
-serde_json = "1.0.132"
+anyhow = "1"
+jotdown = "0.6"
+mdbook = "0.4"
+semver = "1"
+serde_json = "1"
+
+[lints.clippy]
+cargo = "warn"
+pedantic = "warn"
+
+multiple_crate_versions = { level = "allow", priority = 1 }

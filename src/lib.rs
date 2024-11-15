@@ -17,6 +17,7 @@ pub struct Djot {
 }
 
 impl Djot {
+    #[must_use]
     pub fn new() -> Djot {
         let renderer = Renderer::indented(Indentation {
             string: " ".repeat(4),
@@ -25,6 +26,12 @@ impl Djot {
         Self {
             renderer,
         }
+    }
+}
+
+impl Default for Djot {
+    fn default() -> Self {
+        Self::new()
     }
 }
 
