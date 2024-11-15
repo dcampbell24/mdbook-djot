@@ -6,7 +6,7 @@ edition = "2021"
 description = "Djot plugin for mdBook."
 license = "MPL-2.0"
 repository = "https://github.com/dcampbell24/mdbook-djot"
-readme = "README.dj"
+readme = "README.md"
 keywords = ["djot", "jotdown", "mdBook"]
 categories = ["command-line-utilities"]
 
