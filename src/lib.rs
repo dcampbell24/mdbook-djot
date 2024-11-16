@@ -23,9 +23,7 @@ impl Djot {
             string: " ".repeat(4),
             initial_level: 6,
         });
-        Self {
-            renderer,
-        }
+        Self { renderer }
     }
 }
 
@@ -45,27 +43,25 @@ impl Preprocessor for Djot {
             //
         }
 
-        book.for_each_mut(|item| {
-            match item {
-                BookItem::Chapter(chapter) => {
-                    let path = match chapter.source_path.as_ref() {
-                        Some(path) => path,
-                        None => return,
-                    };
-                    let extension = match path.extension() {
-                        Some(extension) => extension,
-                        None => return,
-                    };
-                    if OsStr::new("dj") == extension {
-                        let events = Parser::new(&chapter.content);
-                        let mut content = String::new();
-                        self.renderer.push(events, &mut content).unwrap();
-                        let content_stripped = content.trim().to_string();
-                        chapter.content = content_stripped;
-                    }
+        book.for_each_mut(|item| match item {
+            BookItem::Chapter(chapter) => {
+                let path = match chapter.source_path.as_ref() {
+                    Some(path) => path,
+                    None => return,
+                };
+                let extension = match path.extension() {
+                    Some(extension) => extension,
+                    None => return,
+                };
+                if OsStr::new("dj") == extension {
+                    let events = Parser::new(&chapter.content);
+                    let mut content = String::new();
+                    self.renderer.push(events, &mut content).unwrap();
+                    let content_stripped = content.trim().to_string();
+                    chapter.content = content_stripped;
                 }
-                BookItem::Separator | BookItem::PartTitle(_) => return,
             }
+            BookItem::Separator | BookItem::PartTitle(_) => return,
         });
 
         Ok(book)
@@ -75,4 +71,3 @@ impl Preprocessor for Djot {
         renderer != "markdown"
     }
 }
-
