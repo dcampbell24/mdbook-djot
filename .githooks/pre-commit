@@ -1,0 +1,3 @@
+#!/bin/sh
+cargo +stable clippy
+cargo +stable fmt --all --check
