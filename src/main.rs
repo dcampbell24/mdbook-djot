@@ -7,7 +7,7 @@ use std::{io, process};
 
 use mdbook_djot::Djot;
 
-fn main() -> anyhow::Result<()> {
+fn main() {
     let matches = make_app().get_matches();
     let preprocessor = Djot::new();
     if let Some(sub_args) = matches.subcommand_matches("supports") {
@@ -16,10 +16,9 @@ fn main() -> anyhow::Result<()> {
         eprintln!("{e}");
         process::exit(1);
     }
-
-    Ok(())
 }
 
+#[must_use]
 pub fn make_app() -> Command {
     Command::new("nop-preprocessor")
         .about("A mdbook preprocessor which does precisely nothing")

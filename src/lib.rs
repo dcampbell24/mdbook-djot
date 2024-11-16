@@ -45,13 +45,11 @@ impl Preprocessor for Djot {
 
         book.for_each_mut(|item| match item {
             BookItem::Chapter(chapter) => {
-                let path = match chapter.source_path.as_ref() {
-                    Some(path) => path,
-                    None => return,
+                let Some(path) = chapter.source_path.as_ref() else {
+                    return;
                 };
-                let extension = match path.extension() {
-                    Some(extension) => extension,
-                    None => return,
+                let Some(extension) = path.extension() else {
+                    return;
                 };
                 if OsStr::new("dj") == extension {
                     let events = Parser::new(&chapter.content);
@@ -61,7 +59,7 @@ impl Preprocessor for Djot {
                     chapter.content = content_stripped;
                 }
             }
-            BookItem::Separator | BookItem::PartTitle(_) => return,
+            BookItem::Separator | BookItem::PartTitle(_) => (),
         });
 
         Ok(book)
