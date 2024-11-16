@@ -1,3 +1,5 @@
 # Raw Inline
 
 This is `<?php echo 'Raw Inline' ?>`{=html}.
+
+This is `plaintext`{=plaintext}.
