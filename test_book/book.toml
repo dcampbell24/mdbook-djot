@@ -1,7 +1,10 @@
 [book]
 title = "mdBook test book"
 description = "A demo book to test and validate changes"
-authors = ["David Lawrence Campbell"]
+authors = [
+    "YJDoc2",
+    "David Lawrence Campbell",
+]
 language = "en"
 
 [rust]
