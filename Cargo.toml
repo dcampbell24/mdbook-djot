@@ -1,7 +1,7 @@
 [package]
 authors = ["David Campbell <dcampbell24@gmail.com>"]
 name = "mdbook-djot"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Djot plugin for mdBook."
 license = "MPL-2.0"
