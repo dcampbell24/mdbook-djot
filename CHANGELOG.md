@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - A link in the book to the source repository.
 
+### Changed
+
+- Make printed time more pretty!
+
 ## [0.1.3] - 2024-11-15
 
 ### Changed
