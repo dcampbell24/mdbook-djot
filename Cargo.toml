@@ -19,6 +19,9 @@ mdbook = "0.4"
 semver = "1"
 serde_json = "1"
 
+[profile.release]
+lto = "thin"
+
 [lints.clippy]
 cargo = "warn"
 pedantic = "warn"
