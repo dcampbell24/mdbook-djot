@@ -32,7 +32,7 @@ pub fn make_app() -> Command {
 fn handle_preprocessing(pre: &dyn Preprocessor) -> Result<(), Error> {
     let now = Local::now();
     eprintln!(
-        "{} {}:{}:{:02} [ERROR] ({}): ** FIXME: we have to print a line? **",
+        "{} {:02}:{:02}:{:02} [ERROR] ({}): ** FIXME: we have to print a line? **",
         now.date_naive(),
         now.time().hour(),
         now.time().minute(),
