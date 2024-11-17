@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- lto = thin
 - A link in the book to the source repository.
 
 ### Changed
