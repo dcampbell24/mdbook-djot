@@ -32,13 +32,14 @@ pub fn make_app() -> Command {
 fn handle_preprocessing(pre: &dyn Preprocessor) -> Result<(), Error> {
     let now = Local::now();
     eprintln!(
-        "{} {:02}:{:02}:{:02} [ERROR] ({}): ** FIXME: we have to print a line? **",
+        "{} {:02}:{:02}:{:02} [INFO] ({}): Running the preprocessor",
         now.date_naive(),
         now.time().hour(),
         now.time().minute(),
         now.time().second(),
         pre.name()
     );
+
     let (ctx, book) = CmdPreprocessor::parse_input(io::stdin())?;
     let book_version = Version::parse(&ctx.mdbook_version)?;
     let version_req = VersionReq::parse(mdbook::MDBOOK_VERSION)?;
