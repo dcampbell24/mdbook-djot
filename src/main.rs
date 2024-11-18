@@ -1,5 +1,5 @@
-use chrono::{Local, Timelike};
 use clap::{Arg, ArgMatches, Command};
+use log::info;
 use mdbook::errors::Error;
 use mdbook::preprocess::{CmdPreprocessor, Preprocessor};
 use semver::{Version, VersionReq};
@@ -8,6 +8,7 @@ use std::{io, process};
 use mdbook_djot::Djot;
 
 fn main() {
+    env_logger::init();
     let matches = make_app().get_matches();
     let preprocessor = Djot::new();
     if let Some(sub_args) = matches.subcommand_matches("supports") {
@@ -30,6 +31,8 @@ pub fn make_app() -> Command {
 }
 
 fn handle_preprocessing(pre: &dyn Preprocessor) -> Result<(), Error> {
+    info!("Running the preprocessor.");
+    /*
     let now = Local::now();
     eprintln!(
         "{} {:02}:{:02}:{:02} [ERROR] ({}): ** FIXME: we have to print a line? **",
@@ -39,6 +42,7 @@ fn handle_preprocessing(pre: &dyn Preprocessor) -> Result<(), Error> {
         now.time().second(),
         pre.name()
     );
+    */
     let (ctx, book) = CmdPreprocessor::parse_input(io::stdin())?;
     let book_version = Version::parse(&ctx.mdbook_version)?;
     let version_req = VersionReq::parse(mdbook::MDBOOK_VERSION)?;
