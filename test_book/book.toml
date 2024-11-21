@@ -26,5 +26,7 @@ boost-hierarchy = 2
 boost-paragraph = 1
 expand = true
 heading-split-level = 2
+# You can't rename the file *.dj.
+input-404 = "404.md"
 
 [preprocessor.djot]
