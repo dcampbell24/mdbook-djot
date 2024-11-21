@@ -13,7 +13,7 @@ edition = "2021"
 [output.html]
 git-repository-url = "https://github.com/dcampbell24/mdbook-djot"
 mathjax-support = true
-# You can't rename the file *.dj.
+# You can't rename the file `*.dj`.
 input-404 = "404.md"
 
 [output.html.playground]
