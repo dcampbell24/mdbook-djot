@@ -1,13 +1,13 @@
-# Lists
+## Lists
 
-## ordered, decimal enumerated, followed by a period
+### ordered, decimal enumerated, followed by a period
 
 1. A
 2. Normal
 3. Ordered
 4. List
 
-## ordered, decimal enumerated, followed by a parenthesis
+### ordered, decimal enumerated, followed by a parenthesis
 
 1) A
 
@@ -18,14 +18,14 @@
 3) Still
 4) Normal
 
-## bullet, minus
+### bullet, minus
 
 - An
 - Unordered
 - Normal
 - List
 
-## bullet, plus
+### bullet, plus
 
 + Nested
 
@@ -33,7 +33,7 @@
 
 + List
 
-## bullet, star
+### bullet, star
 
 * This
 
@@ -42,11 +42,11 @@
 
 * ?!
 
-## task
+### task
 
 - [ ] 	task
 
-## Djot Specific
+### Djot Specific
 
 (1) 	ordered, decimal-enumerated, enclosed in parentheses
 

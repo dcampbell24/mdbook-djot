@@ -1,4 +1,4 @@
-# Demo Book
+## Demo Book
 
 This is a simple demo book, which is intended to be used for verifying and validating style changes in mdBook.
 This contains dummy examples of various djot elements and code languages, so that one can check changes made in mdBook styles.

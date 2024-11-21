@@ -2,7 +2,7 @@
 
 This contains various examples of codeblocks, specific to rust
 
-## Simple
+### Simple
 
 ```rust
 fn main(){
@@ -10,7 +10,7 @@ fn main(){
 }
 ```
 
-## With Hidden lines
+### With Hidden lines
 
 ```rust
 # fn main(){
@@ -18,7 +18,7 @@ fn main(){
 # }
 ```
 
-## Editable
+### Editable
 
 ```rust,editable
 fn main(){

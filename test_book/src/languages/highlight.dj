@@ -1,6 +1,6 @@
-# Syntax Highlights
+## Syntax Highlights
 
-## apache
+### apache
 
 ```apache
 # rewrite`s rules for wordpress pretty url
@@ -26,7 +26,7 @@ Allow from All
 20.164.151.111 - - [20/Aug/2015:22:20:18 -0400] "GET /mywebpage/index.php HTTP/1.1" 403 772 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.220 Safari/535.1"
 ```
 
-## armasm
+### armasm
 
 ```armasm
 .data
@@ -55,7 +55,7 @@ _start:
 
 ```
 
-## bash
+### bash
 
 ```bash
 #!/bin/bash
@@ -78,7 +78,7 @@ echo '"quoted"' | tr -d \" > text.txt
 
 ```
 
-## c
+### c
 
 ```c
 #include <stdio.h>
@@ -88,7 +88,7 @@ void main(int argc,char ** argv){
 
 ```
 
-## coffeescript
+### coffeescript
 
 ```coffeescript
 grade = (student, period=(if b? then 7 else 6)) ->
@@ -106,7 +106,7 @@ class Animal extends Being
     alert @name + " moved #{meters}m."
 ```
 
-## cpp
+### cpp
 
 ```cpp
 #include <iostream>
@@ -117,7 +117,7 @@ int main() {
 }
 ```
 
-## csharp
+### csharp
 
 ```csharp
 using System;
@@ -130,7 +130,7 @@ class App
 }
 ```
 
-## css
+### css
 
 ```css
 @font-face {
@@ -154,7 +154,7 @@ body,
 }
 ```
 
-## d
+### d
 
 ```d
 /* This program prints a
@@ -169,7 +169,7 @@ void main()
 }
 ```
 
-## diff
+### diff
 
 ```diff
 Index: languages/ini.js
@@ -204,7 +204,7 @@ Index: languages/ini.js
   It is important to spell
 ```
 
-## go
+### go
 
 ```go
 package main
@@ -215,7 +215,7 @@ func main() {
 }
 ```
 
-## handlebars
+### handlebars
 
 ```handlebars
 <div class='entry'>
@@ -226,7 +226,7 @@ func main() {
 </div>
 ```
 
-## haskell
+### haskell
 
 ```haskell
 main :: IO ()
@@ -234,7 +234,7 @@ main = putStrLn "Hello World!"
 
 ```
 
-## http
+### http
 
 ```http
 POST /task?id=1 HTTP/1.1
@@ -253,7 +253,7 @@ Content-Length: 137
 
 ```
 
-## ini
+### ini
 
 ```ini
 ; boilerplate
@@ -270,7 +270,7 @@ auto = no
 counter = 1_000
 ```
 
-## java
+### java
 
 ```java
 class Main {
@@ -280,7 +280,7 @@ class Main {
 }
 ```
 
-## javascript
+### javascript
 
 ```javascript
 function $initHighlight(block, cls) {
@@ -306,7 +306,7 @@ function $initHighlight(block, cls) {
 export  $initHighlight;
 ```
 
-## json
+### json
 
 ```json
 [
@@ -323,7 +323,7 @@ export  $initHighlight;
 ]
 ```
 
-## julia
+### julia
 
 ```julia
 # function to calculate the volume of a sphere
@@ -351,7 +351,7 @@ end
 vol = sphere_vol(3)
 ```
 
-## kotlin
+### kotlin
 
 ```kotlin
 package org.kotlinlang.play
@@ -361,7 +361,7 @@ fun main() {
 }
 ```
 
-## less
+### less
 
 ```less
 @import 'fruits';
@@ -395,7 +395,7 @@ section > .foo + #bar:hover [href*='less'] {
 }
 ```
 
-## lua
+### lua
 
 ```lua
 --[[
@@ -432,7 +432,7 @@ comment ]==]
 ]] ]=] ]==]
 ```
 
-## makefile
+### makefile
 
 ```makefile
 # Makefile
@@ -451,7 +451,7 @@ clean:
 
 ```
 
-## markdown
+### markdown
 
 ```markdown
 # hello world
@@ -477,7 +477,7 @@ you can write text [with links](http://example.com) inline or [link references][
 2. two thing `i can write code`, and `more` wipee!
 ```
 
-## nginx
+### nginx
 
 ```nginx
 user  www www;
@@ -529,7 +529,7 @@ http {
 }
 ```
 
-## nim
+### nim
 
 ```nim
 from strutils import `%`
@@ -549,7 +549,7 @@ const outputString: string = calcDoors()
 echo outputString
 ```
 
-## objectivec
+### objectivec
 
 ```objectivec
 #import <Foundation/Foundation.h>
@@ -563,7 +563,7 @@ int main(int argc, const char * argv[]) {
 
 ```
 
-## nix
+### nix
 
 ```nix
 let
@@ -572,13 +572,13 @@ in
 "Hello " + world
 ```
 
-## perl
+### perl
 
 ```perl
 print "Hello World!\n";
 ```
 
-## php
+### php
 
 ```php
 <?php
@@ -586,14 +586,14 @@ echo "Hello World!";
 ?>
 ```
 
-## plaintext
+### plaintext
 
 ```plaintext
 I think this is simply plain text?
 Hello World!
 ```
 
-## properties
+### properties
 
 ```properties
 # .properties
@@ -626,7 +626,7 @@ class SomeClass:
 ... prompt'''
 ```
 
-## r
+### r
 
 ```r
 require(stats)
@@ -664,7 +664,7 @@ iris %>%
   summarise(broom::glance(model))
 ```
 
-## ruby
+### ruby
 
 ```ruby
 # The Greeter class
@@ -682,7 +682,7 @@ g = Greeter.new("world")
 g.salute
 ```
 
-## rust
+### rust
 
 ```rust
 fn main()->(){
@@ -690,7 +690,7 @@ fn main()->(){
 }
 ```
 
-## scala
+### scala
 
 ```scala
 /**
@@ -731,7 +731,7 @@ val actions: List[Symbol] =
   'init :: 'read :: 'write :: 'close :: Nil
 ```
 
-## scss
+### scss
 
 ```scss
 import "compass/reset";
@@ -774,7 +774,7 @@ input[type="input"] {
 
 ```
 
-## shell
+### shell
 
 ```shell
 $ echo $EDITOR
@@ -791,7 +791,7 @@ done!
 
 ```
 
-## sql
+### sql
 
 ```sql
 CREATE TABLE "topic" (
@@ -808,7 +808,7 @@ insert into "topic" ("forum_id", "subject")
 values (2, 'D''artagnian');
 ```
 
-## swift
+### swift
 
 ```swift
 import Foundation
@@ -828,7 +828,7 @@ import Foundation
 }
 ```
 
-## typescript
+### typescript
 
 ```typescript
 class MyClass {
@@ -848,7 +848,7 @@ myArray.forEach(() => { }); // fat arrow syntax
 
 ```
 
-## x86asm
+### x86asm
 
 ```x86asm
 section .text
@@ -893,7 +893,7 @@ section .drectve info
         db      '/defaultlib:user32.lib /defaultlib:msvcrt.lib '
 ```
 
-## xml
+### xml
 
 ```xml
 <!DOCTYPE html>
@@ -911,7 +911,7 @@ section .drectve info
 </body>
 ```
 
-## yaml
+### yaml
 
 ```yaml
 ---
