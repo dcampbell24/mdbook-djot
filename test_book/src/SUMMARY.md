@@ -4,6 +4,8 @@
 
 ---
 
+# (This can't be a Djot file, it has to be Markdown.)
+
 - [Introduction](README.dj)
 - [Draft Chapter]()
 
