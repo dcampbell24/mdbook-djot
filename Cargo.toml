@@ -3,6 +3,7 @@ authors = ["David Campbell <dcampbell24@gmail.com>"]
 name = "mdbook-djot"
 version = "0.1.5"
 edition = "2021"
+rust-version = "1.74.1"
 description = "Djot plugin for mdBook."
 license = "MPL-2.0"
 repository = "https://github.com/dcampbell24/mdbook-djot"
