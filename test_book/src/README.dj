@@ -21,4 +21,8 @@ This rough outline is :
 
     contains djot specific items that are inline.
 
+: djot specific block
+
+  contains djot specific items that are block.
+
 This is more for checking and fixing style, rather than verifying that correct code is generated for given djot, that is better handled in tests.
