@@ -1,7 +1,7 @@
 [package]
 authors = ["David Campbell <dcampbell24@gmail.com>"]
 name = "mdbook-djot"
-version = "0.1.5"
+version = "0.2.0"
 edition = "2021"
 rust-version = "1.74.1"
 description = "Djot plugin for mdBook."
@@ -15,7 +15,7 @@ categories = ["command-line-utilities"]
 anyhow = "1"
 chrono = "0.4"
 clap = "4"
-jotdown = "0.6"
+jotdown = "0.7"
 mdbook = "0.4"
 semver = "1"
 serde_json = "1"
