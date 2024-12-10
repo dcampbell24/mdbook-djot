@@ -13,5 +13,5 @@ Djot plugin for mdBook.
 
 ## Install
 
-`cargo install mdbook`
+`cargo install mdbook`  
 `cargo install mdbook-djot`
