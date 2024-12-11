@@ -10,6 +10,7 @@ use mdbook::{
     preprocess::{Preprocessor, PreprocessorContext},
     BookItem,
 };
+use rayon::prelude::*;
 
 /// A Djot preprocessor.
 pub struct Djot {
@@ -43,7 +44,7 @@ impl Preprocessor for Djot {
             //
         }
 
-        book.for_each_mut(|item| match item {
+        book.sections.par_iter_mut().for_each(|item| match item {
             BookItem::Chapter(chapter) => {
                 let Some(path) = chapter.source_path.as_ref() else {
                     return;
