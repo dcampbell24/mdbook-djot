@@ -6,6 +6,7 @@
 
 # (This can't be a Djot file, it has to be Markdown.)
 
+- [Is Not Preprocessed](is_not_preprocessed.md)
 - [Introduction](README.dj)
 - [Draft Chapter]()
 

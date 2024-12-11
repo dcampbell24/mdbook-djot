@@ -5,6 +5,7 @@ use jotdown::{
     html::{Indentation, Renderer},
     Parser, Render,
 };
+use log::debug;
 use mdbook::{
     book::Book,
     preprocess::{Preprocessor, PreprocessorContext},
@@ -52,6 +53,7 @@ impl Preprocessor for Djot {
                     return;
                 };
                 if OsStr::new("dj") == extension {
+                    debug!("Preprocessing {}", chapter);
                     let events = Parser::new(&chapter.content);
                     let mut content = String::new();
                     self.renderer.push(events, &mut content).unwrap();
