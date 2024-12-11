@@ -1,13 +1,20 @@
-use chrono::{Local, Timelike};
+use chrono::Local;
 use clap::{Arg, ArgMatches, Command};
+use env_logger::Builder;
+use log::{info, LevelFilter};
 use mdbook::errors::Error;
 use mdbook::preprocess::{CmdPreprocessor, Preprocessor};
 use semver::{Version, VersionReq};
-use std::{io, process};
+use std::env;
+use std::{
+    io::{self, Write},
+    process,
+};
 
 use mdbook_djot::Djot;
 
 fn main() {
+    init_logger();
     let matches = make_app().get_matches();
     let preprocessor = Djot::new();
     if let Some(sub_args) = matches.subcommand_matches("supports") {
@@ -30,15 +37,7 @@ pub fn make_app() -> Command {
 }
 
 fn handle_preprocessing(pre: &dyn Preprocessor) -> Result<(), Error> {
-    let now = Local::now();
-    eprintln!(
-        "{} {:02}:{:02}:{:02} [INFO] ({}): Running the preprocessor",
-        now.date_naive(),
-        now.time().hour(),
-        now.time().minute(),
-        now.time().second(),
-        pre.name()
-    );
+    info!("Running the preprocessor");
 
     let (ctx, book) = CmdPreprocessor::parse_input(io::stdin())?;
     let book_version = Version::parse(&ctx.mdbook_version)?;
@@ -72,4 +71,28 @@ fn handle_supports(pre: &dyn Preprocessor, sub_args: &ArgMatches) -> ! {
     } else {
         process::exit(1)
     }
+}
+
+fn init_logger() {
+    let mut builder = Builder::new();
+
+    builder.format(|formatter, record| {
+        writeln!(
+            formatter,
+            "{} [{}] ({}): {}",
+            Local::now().format("%Y-%m-%d %H:%M:%S"),
+            record.level(),
+            record.target(),
+            record.args()
+        )
+    });
+
+    if let Ok(var) = env::var("RUST_LOG") {
+        builder.parse_filters(&var);
+    } else {
+        // if no RUST_LOG provided, default to logging at the Info level
+        builder.filter(None, LevelFilter::Info);
+    }
+
+    builder.init();
 }

@@ -1080,12 +1080,14 @@ dependencies = [
 
 [[package]]
 name = "mdbook-djot"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "anyhow",
  "chrono",
  "clap",
+ "env_logger",
  "jotdown",
+ "log",
  "mdbook",
  "semver",
  "serde_json",
