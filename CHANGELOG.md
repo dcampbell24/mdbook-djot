@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - A Markdown chapter to the test_book.
-- debug!() the chapters.
+- debug!() the chapters that are preprocessed.
 
 ## 0.2.2 - 2024-12-11 (yanked)
 
