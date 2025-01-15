@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Make `name()` return a `&'static str`.
+- Expand the README.md.
 - A Markdown chapter to the test_book.
 - debug!() the chapters that are preprocessed.
 
