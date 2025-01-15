@@ -17,3 +17,13 @@ Djot plugin for mdBook.
 cargo install mdbook
 cargo install mdbook-djot
 ```
+
+## Example
+
+Check out the [test_book] for an example of how this works.
+
+[test_book]: https://github.com/dcampbell24/mdbook-djot/tree/main/test_book
+
+You just need to add the line `[preprocessor.djot]` to your `book.toml` to use
+the plugin. Then all the files that end in `.dj` will be treated as Djot files.
+The `SUMMARY` and `404` files have to be markdown.
