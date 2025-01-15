@@ -35,7 +35,7 @@ impl Default for Djot {
 }
 
 impl Preprocessor for Djot {
-    fn name(&self) -> &str {
+    fn name(&self) -> &'static str {
         "djot-preprocessor"
     }
 
