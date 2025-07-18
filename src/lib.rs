@@ -53,7 +53,7 @@ impl Preprocessor for Djot {
                     return;
                 };
                 if OsStr::new("dj") == extension {
-                    debug!("Preprocessing {}", chapter);
+                    debug!("Preprocessing {chapter}");
                     let events = Parser::new(&chapter.content);
                     let mut content = String::new();
                     self.renderer.push(events, &mut content).unwrap();
