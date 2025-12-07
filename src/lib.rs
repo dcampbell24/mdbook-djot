@@ -7,10 +7,7 @@ use jotdown::{
 };
 use log::debug;
 
-use mdbook_preprocessor::{
-    Preprocessor, PreprocessorContext,
-    book::{Book, BookItem},
-};
+use mdbook_preprocessor::{Preprocessor, PreprocessorContext, book::Book};
 
 /// A Djot preprocessor.
 pub struct Djot {
