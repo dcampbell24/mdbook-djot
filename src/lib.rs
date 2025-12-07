@@ -2,14 +2,14 @@ use std::ffi::OsStr;
 
 use anyhow::Error;
 use jotdown::{
-    html::{Indentation, Renderer},
     Parser, Render,
+    html::{Indentation, Renderer},
 };
 use log::debug;
-use mdbook::{
-    book::Book,
-    preprocess::{Preprocessor, PreprocessorContext},
-    BookItem,
+
+use mdbook_preprocessor::{
+    Preprocessor, PreprocessorContext,
+    book::{Book, BookItem},
 };
 
 /// A Djot preprocessor.
@@ -39,10 +39,12 @@ impl Preprocessor for Djot {
         "djot-preprocessor"
     }
 
-    fn run(&self, ctx: &PreprocessorContext, mut book: Book) -> Result<Book, Error> {
-        if let Some(_cfg) = ctx.config.get_preprocessor(self.name()) {
+    fn run(&self, _ctx: &PreprocessorContext, mut book: Book) -> Result<Book, Error> {
+        /* Fixme:
+        if let Ok(cfg) = ctx.config.get(self.name()) {
             //
         }
+        */
 
         book.for_each_mut(|item| match item {
             BookItem::Chapter(chapter) => {
@@ -67,7 +69,7 @@ impl Preprocessor for Djot {
         Ok(book)
     }
 
-    fn supports_renderer(&self, renderer: &str) -> bool {
-        renderer != "markdown"
+    fn supports_renderer(&self, renderer: &str) -> anyhow::Result<bool> {
+        Ok(renderer != "markdown")
     }
 }
