@@ -10,6 +10,7 @@ repository = "https://github.com/dcampbell24/mdbook-djot"
 readme = "README.md"
 keywords = ["djot", "jotdown", "mdBook"]
 categories = ["command-line-utilities"]
+include = ["src/**/*", "LICENSE", "README.md", "CHANGELOG.md"]
 
 [dependencies]
 anyhow = "1"
