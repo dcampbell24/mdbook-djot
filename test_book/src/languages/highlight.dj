@@ -1,5 +1,7 @@
 ## Syntax Highlights
 
+```` =html
+
 ### apache
 
 ```apache
@@ -25,6 +27,10 @@ Allow from All
 
 20.164.151.111 - - [20/Aug/2015:22:20:18 -0400] "GET /mywebpage/index.php HTTP/1.1" 403 772 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.220 Safari/535.1"
 ```
+
+````
+
+```` =html
 
 ### armasm
 
@@ -55,6 +61,10 @@ _start:
 
 ```
 
+````
+
+```` =html
+
 ### bash
 
 ```bash
@@ -78,6 +88,10 @@ echo '"quoted"' | tr -d \" > text.txt
 
 ```
 
+````
+
+```` =html
+
 ### c
 
 ```c
@@ -87,6 +101,10 @@ void main(int argc,char ** argv){
 }
 
 ```
+
+````
+
+```` =html
 
 ### coffeescript
 
@@ -106,6 +124,10 @@ class Animal extends Being
     alert @name + " moved #{meters}m."
 ```
 
+````
+
+```` =html
+
 ### cpp
 
 ```cpp
@@ -116,6 +138,10 @@ int main() {
    return 0;
 }
 ```
+
+````
+
+```` =html
 
 ### csharp
 
@@ -129,6 +155,10 @@ class App
   }
 }
 ```
+
+````
+
+```` =html
 
 ### css
 
@@ -154,6 +184,10 @@ body,
 }
 ```
 
+````
+
+```` =html
+
 ### d
 
 ```d
@@ -168,6 +202,10 @@ void main()
     writeln("Hello, World!");
 }
 ```
+
+````
+
+```` =html
 
 ### diff
 
@@ -204,6 +242,10 @@ Index: languages/ini.js
   It is important to spell
 ```
 
+````
+
+```` =html
+
 ### go
 
 ```go
@@ -214,6 +256,10 @@ func main() {
     fmt.Println("Hello World!")
 }
 ```
+
+````
+
+```` =html
 
 ### handlebars
 
@@ -226,6 +272,10 @@ func main() {
 </div>
 ```
 
+````
+
+```` =html
+
 ### haskell
 
 ```haskell
@@ -233,6 +283,10 @@ main :: IO ()
 main = putStrLn "Hello World!"
 
 ```
+
+````
+
+```` =html
 
 ### http
 
@@ -253,6 +307,10 @@ Content-Length: 137
 
 ```
 
+````
+
+```` =html
+
 ### ini
 
 ```ini
@@ -270,6 +328,10 @@ auto = no
 counter = 1_000
 ```
 
+````
+
+```` =html
+
 ### java
 
 ```java
@@ -279,6 +341,10 @@ class Main {
   }
 }
 ```
+
+````
+
+```` =html
 
 ### javascript
 
@@ -306,6 +372,10 @@ function $initHighlight(block, cls) {
 export  $initHighlight;
 ```
 
+````
+
+```` =html
+
 ### json
 
 ```json
@@ -322,6 +392,10 @@ export  $initHighlight;
   }
 ]
 ```
+
+````
+
+```` =html
 
 ### julia
 
@@ -395,6 +469,10 @@ section > .foo + #bar:hover [href*='less'] {
 }
 ```
 
+````
+
+```` =html
+
 ### lua
 
 ```lua
@@ -432,6 +510,10 @@ comment ]==]
 ]] ]=] ]==]
 ```
 
+````
+
+```` =html
+
 ### makefile
 
 ```makefile
@@ -450,6 +532,10 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 ```
+
+````
+
+```` =html
 
 ### markdown
 
@@ -476,6 +562,10 @@ you can write text [with links](http://example.com) inline or [link references][
 1. one thing (yeah!)
 2. two thing `i can write code`, and `more` wipee!
 ```
+
+````
+
+```` =html
 
 ### nginx
 
@@ -529,6 +619,10 @@ http {
 }
 ```
 
+````
+
+```` =html
+
 ### nim
 
 ```nim
@@ -549,6 +643,10 @@ const outputString: string = calcDoors()
 echo outputString
 ```
 
+````
+
+```` =html
+
 ### objectivec
 
 ```objectivec
@@ -563,6 +661,10 @@ int main(int argc, const char * argv[]) {
 
 ```
 
+````
+
+```` =html
+
 ### nix
 
 ```nix
@@ -572,11 +674,19 @@ in
 "Hello " + world
 ```
 
+````
+
+```` =html
+
 ### perl
 
 ```perl
 print "Hello World!\n";
 ```
+
+````
+
+```` =html
 
 ### php
 
@@ -586,12 +696,20 @@ echo "Hello World!";
 ?>
 ```
 
+````
+
+```` =html
+
 ### plaintext
 
 ```plaintext
 I think this is simply plain text?
 Hello World!
 ```
+
+````
+
+```` =html
 
 ### properties
 
@@ -609,7 +727,11 @@ empty_key
 \:\= = value5
 ```
 
-## python
+````
+
+```` =html
+
+### python
 
 ```python
 @requires_authorization(roles=["ADMIN"])
@@ -625,6 +747,10 @@ class SomeClass:
 >>> message = '''interpreter
 ... prompt'''
 ```
+
+````
+
+```` =html
 
 ### r
 
@@ -664,6 +790,10 @@ iris %>%
   summarise(broom::glance(model))
 ```
 
+````
+
+```` =html
+
 ### ruby
 
 ```ruby
@@ -682,6 +812,10 @@ g = Greeter.new("world")
 g.salute
 ```
 
+````
+
+```` =html
+
 ### rust
 
 ```rust
@@ -689,6 +823,10 @@ fn main()->(){
     println!("Hello World!");
 }
 ```
+
+````
+
+```` =html
 
 ### scala
 
@@ -730,6 +868,10 @@ def gsum[A: Ring](as: Seq[A]): A =
 val actions: List[Symbol] =
   'init :: 'read :: 'write :: 'close :: Nil
 ```
+
+````
+
+```` =html
 
 ### scss
 
@@ -774,6 +916,10 @@ input[type="input"] {
 
 ```
 
+````
+
+```` =html
+
 ### shell
 
 ```shell
@@ -790,6 +936,10 @@ All
 done!
 
 ```
+
+````
+
+```` =html
 
 ### sql
 
@@ -828,6 +978,10 @@ import Foundation
 }
 ```
 
+````
+
+```` =html
+
 ### typescript
 
 ```typescript
@@ -847,6 +1001,10 @@ declare magicNumber number;
 myArray.forEach(() => { }); // fat arrow syntax
 
 ```
+
+````
+
+```` =html
 
 ### x86asm
 
@@ -893,6 +1051,10 @@ section .drectve info
         db      '/defaultlib:user32.lib /defaultlib:msvcrt.lib '
 ```
 
+````
+
+```` =html
+
 ### xml
 
 ```xml
@@ -910,6 +1072,10 @@ section .drectve info
   <!-- here goes the rest of the page -->
 </body>
 ```
+
+````
+
+```` =html
 
 ### yaml
 
@@ -954,3 +1120,5 @@ array_nested:
 - b
 - comment
 ```
+
+````
