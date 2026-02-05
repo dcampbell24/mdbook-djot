@@ -1,5 +1,4 @@
 [package]
-authors = ["David Campbell <dcampbell24@gmail.com>"]
 name = "mdbook-djot"
 version = "0.9.1"
 edition = "2024"
