@@ -1,3 +1,8 @@
+<!-- >
+SPDX-FileCopyrightText: 2025 David Lawrence Campbell
+SPDX-License-Identifier: MPL-2.0
+<-->
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
@@ -7,12 +12,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 0.2.2 - 2026-03-20
+
 ### Added
 
+- REUSE badge.
 - Make `name()` return a `&'static str`.
 - Expand the README.md.
 - A Markdown chapter to the test_book.
 - debug!() the chapters that are preprocessed.
+
+### Changed
+
+- Remove chrono dependency.
 
 ## 0.2.2 - 2024-12-11 (yanked)
 

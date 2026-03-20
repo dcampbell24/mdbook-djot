@@ -1,3 +1,8 @@
+<!-- >
+SPDX-FileCopyrightText: 2025 David Lawrence Campbell
+SPDX-License-Identifier: MPL-2.0
+<-->
+
 # Summary
 
 [Prefix Chapter](prefix.dj)

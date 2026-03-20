@@ -1,3 +1,8 @@
+{%
+SPDX-FileCopyrightText: 2025 David Lawrence Campbell
+SPDX-License-Identifier: MPL-2.0
+%}
+
 ## Code
 
 This section only does simple code blocks and inline code, detailed syntax highlight and stuff is in the languages section

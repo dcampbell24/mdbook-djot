@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2025 David Lawrence Campbell
+// SPDX-License-Identifier: MPL-2.0
+
 use clap::{Arg, ArgMatches, Command};
 use env_logger::Builder;
 use log::{LevelFilter, info};

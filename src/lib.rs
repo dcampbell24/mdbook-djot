@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2025 David Lawrence Campbell
+// SPDX-License-Identifier: MPL-2.0
+
 use std::ffi::OsStr;
 
 use anyhow::Error;

@@ -1,4 +1,7 @@
 #!/bin/bash -e
 
+# SPDX-FileCopyrightText: 2025 David Lawrence Campbell
+# SPDX-License-Identifier: MPL-2.0
+
 cargo +stable clippy
 cargo +stable fmt --all --check

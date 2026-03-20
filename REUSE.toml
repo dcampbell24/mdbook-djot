@@ -1,0 +1,23 @@
+version = 1
+
+
+[[annotations]]
+path = "Cargo.lock"
+SPDX-License-Identifier = "MPL-2.0"
+SPDX-FileCopyrightText = "David Lawrence Campbell"
+
+[[annotations]]
+path = "cspell.json"
+SPDX-License-Identifier = "MPL-2.0"
+SPDX-FileCopyrightText = "David Lawrence Campbell"
+
+[[annotations]]
+path = "Makefile"
+SPDX-License-Identifier = "MPL-2.0"
+SPDX-FileCopyrightText = "David Lawrence Campbell"
+
+[[annotations]]
+path = "test_book/Makefile"
+SPDX-License-Identifier = "MPL-2.0"
+SPDX-FileCopyrightText = "David Lawrence Campbell"
+
