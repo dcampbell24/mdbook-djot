@@ -1,14 +1,10 @@
-use chrono::Local;
 use clap::{Arg, ArgMatches, Command};
 use env_logger::Builder;
 use log::{LevelFilter, info};
 use mdbook_preprocessor::Preprocessor;
 use semver::{Version, VersionReq};
 use std::env;
-use std::{
-    io::{self, Write},
-    process,
-};
+use std::{io, process};
 
 use mdbook_djot::Djot;
 
@@ -72,24 +68,13 @@ fn handle_supports(pre: &dyn Preprocessor, sub_args: &ArgMatches) -> ! {
     }
 }
 
-fn init_logger() {
+pub fn init_logger() {
     let mut builder = Builder::new();
-
-    builder.format(|formatter, record| {
-        writeln!(
-            formatter,
-            "{} [{}] ({}): {}",
-            Local::now().format("%Y-%m-%d %H:%M:%S"),
-            record.level(),
-            record.target(),
-            record.args()
-        )
-    });
 
     if let Ok(var) = env::var("RUST_LOG") {
         builder.parse_filters(&var);
     } else {
-        // if no RUST_LOG provided, default to logging at the Info level
+        // If no RUST_LOG provided, default to logging at the Info level.
         builder.filter(None, LevelFilter::Info);
     }
 
