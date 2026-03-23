@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-## 0.9.2 - 2026-03-23
+## [0.9.2] - 2026-03-23
 
 ### Added
 
@@ -92,6 +92,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release!
 
+[0.9.2]: https://crates.io/crates/mdbook-djot/0.9.2
 [0.2.1]: https://crates.io/crates/mdbook-djot/0.2.1
 [0.2.0]: https://crates.io/crates/mdbook-djot/0.2.0
 [0.1.5]: https://crates.io/crates/mdbook-djot/0.1.5
