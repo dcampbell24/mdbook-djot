@@ -7,9 +7,9 @@ SPDX-License-Identifier: MPL-2.0
 
 [![github]][github-link]&ensp;[![crates-io]][crates-io-link]&ensp;[![docs-rs]][docs-rs-link]&ensp;[![REUSE status]][reuse]&ensp;
 
-[github]: https://img.shields.io/badge/github-8da0cb?logo=github
+[github]: https://img.shields.io/badge/github-111111?logo=github
 [github-link]: https://github.com/dcampbell24/mdbook-djot
-[crates-io]: https://img.shields.io/badge/crates.io-fc8d62
+[crates-io]: https://img.shields.io/badge/crates.io-fc8d62?logo=rust
 [crates-io-link]: https://crates.io/crates/mdbook-djot
 [docs-rs]: https://img.shields.io/badge/docs.rs-66c2a5?logo=docsdotrs
 [docs-rs-link]: https://docs.rs/mdbook-djot
