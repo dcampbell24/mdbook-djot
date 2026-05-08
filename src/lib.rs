@@ -20,12 +20,10 @@ impl Preprocessor for Djot {
         "djot-preprocessor"
     }
 
-    fn run(&self, _ctx: &PreprocessorContext, mut book: Book) -> Result<Book, Error> {
-        /* Fixme:
-        if let Ok(cfg) = ctx.config.get(self.name()) {
-            //
+    fn run(&self, ctx: &PreprocessorContext, mut book: Book) -> Result<Book, Error> {
+        if ctx.renderer != "html" {
+            return Ok(book);
         }
-        */
 
         book.for_each_chapter_mut(|chapter| {
             let Some(path) = chapter.source_path.as_ref() else {
@@ -56,6 +54,6 @@ impl Preprocessor for Djot {
     }
 
     fn supports_renderer(&self, renderer: &str) -> anyhow::Result<bool> {
-        Ok(renderer != "markdown")
+        Ok(renderer == "html")
     }
 }
