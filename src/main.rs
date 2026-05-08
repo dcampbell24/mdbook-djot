@@ -14,7 +14,8 @@ use mdbook_djot::Djot;
 fn main() {
     init_logger();
     let matches = make_app().get_matches();
-    let preprocessor = Djot::new();
+    let preprocessor = Djot;
+
     if let Some(sub_args) = matches.subcommand_matches("supports") {
         handle_supports(&preprocessor, sub_args);
     } else if let Err(e) = handle_preprocessing(&preprocessor) {

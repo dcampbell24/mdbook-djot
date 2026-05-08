@@ -3,7 +3,7 @@
 
 [package]
 name = "mdbook-djot"
-version = "0.9.2"
+version = "0.10.0"
 edition = "2024"
 rust-version = "1.88"
 description = "Djot plugin for mdBook."
@@ -18,7 +18,7 @@ include = ["src/**/*", "LICENSE", "README.md", "CHANGELOG.md"]
 anyhow = "1"
 clap = "4"
 env_logger = "0.11"
-jotdown = "0.9"
+jotdown = "0.10"
 log = "0.4"
 mdbook-preprocessor = "0.5"
 semver = "1"
@@ -28,7 +28,11 @@ serde_json = "1"
 lto = "thin"
 
 [lints.clippy]
-cargo = "warn"
-pedantic = "warn"
-
+cargo = "deny"
+complexity = "deny"
+correctness = "deny"
+pedantic = "deny"
+perf = "deny"
+style = "deny"
+suspicious = "deny"
 multiple_crate_versions = { level = "allow", priority = 1 }

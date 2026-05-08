@@ -13,26 +13,7 @@ use log::debug;
 use mdbook_preprocessor::{Preprocessor, PreprocessorContext, book::Book};
 
 /// A Djot preprocessor.
-pub struct Djot {
-    renderer: Renderer,
-}
-
-impl Djot {
-    #[must_use]
-    pub fn new() -> Djot {
-        let renderer = Renderer::indented(Indentation {
-            string: " ".repeat(4),
-            initial_level: 6,
-        });
-        Self { renderer }
-    }
-}
-
-impl Default for Djot {
-    fn default() -> Self {
-        Self::new()
-    }
-}
+pub struct Djot;
 
 impl Preprocessor for Djot {
     fn name(&self) -> &'static str {
@@ -57,11 +38,17 @@ impl Preprocessor for Djot {
 
             if OsStr::new("dj") == extension {
                 debug!("Preprocessing {chapter}");
+
+                let mut renderer = Renderer::indented(Indentation {
+                    string: " ".repeat(4),
+                    initial_level: 6,
+                });
+
                 let events = Parser::new(&chapter.content);
                 let mut content = String::new();
-                self.renderer.push(events, &mut content).unwrap();
-                let content_stripped = content.trim().to_string();
-                chapter.content = content_stripped;
+
+                renderer.push_events(events, &mut content).unwrap();
+                chapter.content = content.trim().to_string();
             }
         });
 
